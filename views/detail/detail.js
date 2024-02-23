@@ -12,8 +12,8 @@ async function getProductInfo(id) {
     })
     .then(res => {
       // 성공적으로 데이터를 받았을 때 처리
-      console.log(res);
-      
+      console.log(res.data);
+      return res.data;
     })
     .catch(error => {
       // 오류 처리
@@ -48,9 +48,17 @@ async function updateProductInfo() {
     alert('상품을 표시할 수 없습니다.')
     return
   }
+  // URL에서 상품 ID 가져오기
+  function getProductIdFromUrl() {
+    const url = new URL(window.location.href);
+    return url.searchParams.get('id');
+  }
+  //해당하는 url에서 상품 id를 가져온다
+  const productId = getProductIdFromUrl();
+  console.log('productId: ', productId);
+  //상품 id를 통해 상품 정보를 가져온다
+  const product = await getProductInfo(productId);
 
-  const product = await getProductInfo(); // API 호출해서 상품 상세 정보 가져오기 => 서버를 호출하니까 느림
-  
   productInfoElement.innerHTML = `
   <div class="bookImg">
   <p class="img"><img src="${product.img_url}" alt="책 표지"></p>
