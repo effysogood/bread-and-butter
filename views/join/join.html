@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Butter & Better</title>
+
+<!-- 아이콘 -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- 커스텀 css -->
+<link rel="stylesheet" href="./join.css">
+<link rel="stylesheet" href="../common/css/reset.css">
+<link rel="stylesheet" href="../common/header/header.css">
+<link rel="stylesheet" href="../common/footer/footer.css">
+<script type="text/javascript" src="./join.js"></script>
+<script src="../common/loadHTML.js"></script>
+
+
+</head>
+<body>
+<!-- header -->
+<header data-load-html="../common/header/header.html"></header>
+
+<!-- main -->
+<div class="mainBox"  style="display:  ;">
+    <div class="inner">
+        <div class="titleBox">
+            <h2>Create Account</h2>
+        </div>
+
+        <!-- join form -->
+        <div class="joinForm">
+            <form action="">
+                <div class="form">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" placeholder="이름">
+                </div>
+                
+                <div class="form">
+                    <label for="email">Email *</label>
+                    <input type="text" id="email" placeholder="이메일">
+                </div>
+
+                <div class="form">
+                    <label for="password">Password *</label>
+                    <input type="text" id="password" placeholder="비밀번호">
+                </div>
+
+                <div class="form">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="text" id="confirmPassword" placeholder="비밀번호 확인">
+                </div>
+
+
+                <div class="form">
+                    <label for="phone">Phone *</label>
+                    <div class="phoneInput">
+                        <select name="phone" id="phone" style="width: 190px;">
+                            <option value="010">010</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="017">018</option>
+                        </select>
+                        <input type="number" style="width: 190px; margin-top: 0;"> 
+                        <input type="number" style="width: 190px; margin-top: 0;">
+                    </div>
+                </div>
+
+                <div class="form address">
+                    <label for="confirmPassword">Address *</label>
+                    <div class="postalCode">
+                        <input type="number" placeholder="우편번호">
+                        <button type="button">주소 검색</button>
+                    </div>
+                    <input type="text" placeholder="기본 주소">
+                    <input type="text" placeholder="나머지 주소 (선택)">
+                    <select name="message" id="message" style="width: 100%;" onchange="selectText()">
+                        <option value="0">배송 메세지 (선택)</option>
+                        <option value="1">부재 시, 경비실에 맡겨주세요.</option>
+                        <option value="2">배송 전에 미리 연락 바랍니다.</option>
+                        <option value="3">부재 시, 문 앞에 놓아주세요.</option>
+                        <option value="4">빠른 배송 부탁드립니다.</option>
+                        <option value="5">택배함에 보관해주세요.</option>
+                        <option value="6" class="input">기타 (직접 입력)</option>
+                    </select>
+
+                    <input type="text" class="messageInput off" placeholder="직접 입력" style="margin-top: 3px;">
+
+                </div>
+
+                <button type="button" class="signButton">SIGN IN</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- 회원가입 완료 시 노출 -->
+<div class="joinCompletion"  style="display:none;">
+    <div>
+        <h3>Welcome</h3>
+        <p class="text">
+            <ion-icon name="checkmark-circle"></ion-icon><br>
+            <span class="textSpan">회원가입이 완료되었습니다.</span><br>
+        </p>
+        <div class="buttons">
+            <button type="button" class="home" onclick="location.href='../home/home.html'" >BACK TO MAIN</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- footer -->
+<footer data-load-html="../common/footer/footer.html"></footer>    
+</body>
+
+</html>
