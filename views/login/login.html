@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Better-로그인</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/header/header.css">
+    <link rel="stylesheet" href="../common/footer/footer.css">
+    <script type="text/javascript" src="./login.js"></script>
+    <script src="../common/loadHTML.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header data-load-html="../common/header/header.html">
+    </header>
+    
+    <section class="loginBox">
+        <section class="login">
+            <h1>Login</h1>
+
+            <div class="login-box">
+                <ul>
+                    <label for="E-mail">E-mail</label>
+                    <li><input type="text" placeholder="e-mail" id="E-mail"></li>
+                    <label for="Password">Password</label>
+                    <li><input type="text" placeholder="password" id="Password"></li>
+                    <li><button class="signin-btn">SIGN IN</button></li>
+                    <li class="create-btn">Don't have an account?<a href="URL" style="text-decoration: underline;">
+                            Create account</a></li>
+
+                    <!-- <h2>E-mail</h2>
+               <input type="text" placeholder="E-mail">
+               <h2>Password</h2>
+              <input type="text" placeholder="Password">
+               <button id="sign-in">SIGN IN</button> -->
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <!-- footer -->
+    <footer data-load-html="../common/footer/footer.html">
+    </footer>
+</body>
+
+</html>
