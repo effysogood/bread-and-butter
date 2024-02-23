@@ -50,7 +50,10 @@
                     <h3>Delivery</h3>
                     <div class="input">
                         <form action="">
-                            <input type="number" placeholder="우편번호">
+                            <div class="postalCode">
+                                <input type="number" placeholder="우편번호">
+                                <button type="button">주소 검색</button>
+                            </div>
                             <input type="text" placeholder="기본 주소">
                             <input type="text" placeholder="나머지 주소 (선택)">
                             <select name="message" id="message" style="width: 100%; margin-top: 18px;" onchange="selectText()">
