@@ -11,4 +11,3 @@ function selectText () {
         messageInput.classList.add("off")
     }
 }
-
