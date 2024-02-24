@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../common/css/reset.css">
   <link rel="stylesheet" href="../common/header/header.css">
   <link rel="stylesheet" href="../common/footer/footer.css">
-  <script type="text/javascript" src="./category.js"></script>
+  <script type="module" src="./category.js"></script>
   <script src="../common/loadHTML.js"></script>
 <!-- 아이콘 -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -20,12 +20,12 @@
 
   <main>
     <section class="category">
-      <h1>카테고리 이름</h1>
+      <h1 id="categoryName">카테고리 이름</h1>
       <p>Description</p>
     </section>
     
     <section class="products-sort">
-      <span class="total-count">100 products</span>
+      <span class="total-count" id="totalCount">100 products</span>
       <select class="product-filter">
         <option value="최신상품">최신순</option>
         <option value="인기상품">인기순</option>
@@ -35,15 +35,15 @@
     </section>
     
     <section>
-      <ul class="product-list">
+      <ul class="product-list" id="productList">
         <!-- 제품을 반복하며 리스트 아이템을 생성 -->
-        <li class="product-item">
+        <!-- <li class="product-item">
           <a href="#">
-            <img src="https://picsum.photos/300/300" alt="제품 이미지">
+            <p claass="img"><img src="https://picsum.photos/300/300" alt="제품 이미지"></p>
             <h2>제품 이름</h2>
             <span class="price">price</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </section>
     <div class="pagination-box" >
