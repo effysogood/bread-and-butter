@@ -41,7 +41,7 @@
                     </colgroup>
 
                     <thead class="head">
-                        <th class="allCheck"><input type="checkbox"></th>
+                        <th class="allCheck"><input type="checkbox" class="checkbox ck-all"></th>
                         <th class="left">Products</th>
                         <th>Price</th>
                         <th>Quantity</th>
@@ -50,13 +50,26 @@
                     
 
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" class="checkbox ck"></td>
                         <td class="left">
                             <div class="book">
                                 <p class="img"><img src="https://picsum.photos/300/300" alt="책표지"></p>
                                 <h3>Title Here</h3>
                             </div>
-                        </td>
+                        </td>  
+                        <td>₩17,000</td>
+                        <td class="quantity"><input type="text" value="1"></td>
+                        <td class="total_price">₩17,000</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="checkbox ck"></td>
+                        <td class="left">
+                            <div class="book">
+                                <p class="img"><img src="https://picsum.photos/300/300" alt="책표지"></p>
+                                <h3>Title Here</h3>
+                            </div>
+                        </td>  
                         <td>₩17,000</td>
                         <td class="quantity"><input type="text" value="1"></td>
                         <td class="total_price">₩17,000</td>
@@ -82,7 +95,7 @@
             </div>
 
             <div class="buttonBox">
-                <button type="button">REMOVE</button>
+                <button type="button" id="removeBtn">REMOVE</button>
 
                 <div class="rightBox">
                     <button type="button">CONTINUE SHOPPING</button>
