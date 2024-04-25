@@ -1,4 +1,4 @@
-const categoryModel = require('../db/models/category-model')
+const categoryModel = require('../db/models/categoryModel')
 // const 
 
 class CategoryService {

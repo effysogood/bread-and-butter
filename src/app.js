@@ -1,9 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 const bookRouter = require('./routers/bookRouter');
+const userRouter = require('./routers/userRouter');
+const categoryRouter = require('./routers/categoryRouter');
+
+//require('./passport')();
 
 //connect to mongodb
 // TODO : env 연결 확인
@@ -23,12 +29,17 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
   res.send('Butter and Better');
 });
 
+//app.use(passport.initialize());
+
 app.use('/api/books', bookRouter);
+app.use('/api/users', userRouter);
+app.use('/api/category', categoryRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -43,7 +54,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  //res.render('error');
 });
 
 module.exports = app;

@@ -1,5 +1,5 @@
 const Router = require('express')
-const categoryService = require('../services/category-service')
+const categoryService = require('../services/categoryService')
 const categoryRouter = Router()
 
 // adminAuth - 관리자 확인
@@ -21,7 +21,7 @@ categoryRouter.get('/', async (req, res, next) => {
 })
 
 // 카테고리 추가 -> admin 한정
-categoryRouter.post('/', adminAuth, async (req, res, next) => {
+categoryRouter.post('/', async (req, res, next) => {
     try {
         const newCategory = await categoryService.addCategory(req.body)
 
@@ -37,7 +37,7 @@ categoryRouter.post('/', adminAuth, async (req, res, next) => {
 })
 
 // 카테고리 수정 -> admin 한정
-categoryRouter.patch('/:categoryId', adminAuth, async (req, res, next) => {
+categoryRouter.patch('/:categoryId', async (req, res, next) => {
     try {
 
     }
@@ -47,7 +47,7 @@ categoryRouter.patch('/:categoryId', adminAuth, async (req, res, next) => {
 })
 
 // 카테고리 삭제 -> admin 한정
-categoryRouter.delete('/:categoryId', adminAuth, async (req, res, next) => {
+categoryRouter.delete('/:categoryId', async (req, res, next) => {
     try {
 
     }
