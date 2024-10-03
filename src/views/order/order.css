@@ -1,0 +1,273 @@
+/* 주문 창 */
+.mainBox .inner {
+  width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 60px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+.mainBox .inner .inputBox {
+  width: 560px;
+}
+.mainBox .inner .inputBox .box {
+  margin-bottom: 24px;
+}
+.mainBox .inner .inputBox .box h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--camel-500);
+  margin-bottom: 18px;
+}
+.mainBox .inner .inputBox .box.contact input:first-child {
+  margin-top: 0;
+}
+.mainBox .inner .inputBox .box input {
+  width: 100%;
+  margin-top: 18px;
+}
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.mainBox .inner .inputBox .box .phone {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messageInput.off {
+  display: none;
+}
+.mainBox .inner .inputBox .box .radio_select {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  font-size: 18px;
+  border: 1px solid var(--cream-700);
+  border-radius: 4px;
+}
+.mainBox .inner .inputBox .box .radio_select input {
+  margin-top: 0px;
+  vertical-align: middle;
+}
+.mainBox .inner .inputBox .box .radio_select input + label {
+  margin-bottom: 0px;
+  vertical-align: middle;
+  color: #c4c4c4;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.mainBox .inner .inputBox .box .radio_select input:checked + label {
+  color: #000;
+  position: relative;
+}
+.mainBox .inner .inputBox .box .radio_select input:checked + label:after {
+  position: absolute;
+  content: '';
+  width: 560px;
+  height: 53px;
+  border: 2px solid var(--orange-500);
+  border-radius: 4px;
+  left: -64px;
+  top: -19px;
+}
+
+.payButton {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 0;
+  background: var(--orange-500);
+  font-size: 20px;
+  border-radius: 4px;
+  color: var(--bg-color);
+  transition: all 0.2s ease-in;
+}
+.payButton:hover {
+  box-shadow: 6px 8px 30px rgba(136, 108, 75, 0.3);
+}
+.postalCode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.postalCode input {
+  width: 429px !important;
+  margin-top: 0px !important;
+}
+.postalCode button {
+  box-sizing: border-box;
+  width: 150px;
+  padding: 13px 24px;
+  font-size: 18px;
+  color: var(--orange-500);
+  border-radius: 4px;
+  margin-left: 15px;
+  border: 1px solid var(--camel-500);
+}
+
+/* 주문 목록 */
+.checkout {
+  width: 592px;
+  height: auto;
+  position: sticky;
+  top: 0;
+}
+.checkout h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--camel-500);
+  margin-bottom: 18px;
+}
+.checkout .orderBox {
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--mocha-500);
+  box-shadow: 6px 8px 30px #886d4b20;
+}
+.checkout .orderBox > div {
+  box-sizing: border-box;
+  padding: 32px;
+}
+.checkout .orderBox > div .products {
+  color: var(--orange-500);
+  font-size: 20px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.cart-empty-message {
+  width: 100%;
+  text-align: center;
+  color: var(--camel-500);
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+  border-bottom: solid 1px var(--cream-700);
+  padding: 54px 0;
+  display: none;
+}
+
+.cart-empty-message.active {
+  display: block;
+}
+.checkout .orderBox > div .products li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--camel-500);
+}
+.checkout .orderBox > div .products li p.img {
+  width: 130px;
+  height: auto;
+}
+.checkout .orderBox > div .products li p.img img {
+  width: 100%;
+  border: 1px solid #c4c4c4;
+}
+.checkout .orderBox > div .products li .name {
+  width: 186px;
+}
+.checkout .orderBox > div .products li .num {
+  width: 40px;
+}
+.checkout .orderBox > div .products li .price {
+  width: 120px;
+}
+.priceBox {
+  color: var(--orange-500);
+  margin-top: 16px;
+}
+.priceBox p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.priceBox p:last-child {
+  margin-bottom: 0px;
+}
+.priceBox p.total {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* 주문 완료 */
+.orderCompletion {
+  align-items: center;
+  justify-content: center;
+  min-height: 714px;
+}
+.orderCompletion > div {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.orderCompletion > div > h3 {
+  color: var(--orange-500);
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.orderCompletion > div p {
+  background: #fff;
+  border: 1px solid var(--camel-500);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--orange-500);
+  width: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 30px 120px;
+  border-radius: 4px;
+}
+.orderCompletion > div p ion-icon {
+  font-size: 65px;
+}
+.orderCompletion > div p span {
+  display: inline-block;
+}
+.orderCompletion > div p span.textSpan {
+  margin: 24px 0;
+}
+.orderCompletion > div p span.order {
+  font-size: 16px;
+  color: var(--camel-500);
+  font-weight: normal;
+}
+.orderCompletion > div p span.orderDate {
+  margin-top: 10px;
+}
+.orderCompletion > div .buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+.orderCompletion > div .buttons button {
+  font-size: 18px;
+  color: var(--orange-500);
+  box-sizing: border-box;
+  padding: 18px 24px;
+  border: 1px solid var(--camel-500);
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+}
+.orderCompletion > div .buttons button:hover {
+  box-shadow: 6px 8px 30px rgba(136, 108, 75, 0.3);
+}
+.orderCompletion > div .buttons button.mypage {
+  margin-left: 32px;
+  background: var(--orange-500);
+  color: #fff;
+  border: none;
+}

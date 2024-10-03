@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Better-로그인</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="/src/views/common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/views/common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="/src/views/common/img/favicon.io" />
+
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="/src/views/login/login.css">
+    <link rel="stylesheet" href="/src/views/common/css/reset.css">
+    <link rel="stylesheet" href="/src/views/common/header/header.css">
+    <link rel="stylesheet" href="/src/views/common/footer/footer.css">
+    <script type="module" src="/src/views/login/login.js"></script>
+    <script src="/src/views/common/loadHTML.js"></script>
+    <script type="module" src="/src/views/common/header/header.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header data-load-html="/src/views/common/header/header.html">
+    </header>
+
+    <section class="loginBox">
+        <article class="login">
+            <h1>Login</h1>
+
+            <div class="login-box">
+                <ul>
+                    <label for="E-mail">Email</label>
+                    <li><input type="text" placeholder="이메일" id="E-mail"></li>
+                    <label for="Password" style="margin-top: 18px;">Password</label>
+                    <li><input type="password" placeholder="비밀번호" id="Password"></li>
+                    <li><button class="signin-btn">LOGIN</button></li>
+                    <li class="create-btn">Don't have an account?<a href="/join"
+                            style="text-decoration: underline;">Create account</a></li>
+                    <li><button type="button" class='btn-order-track'>비회원 주문 조회</button></li>
+                </ul>
+            </div>
+        </article>
+        <article class="order-track">
+            <h1>Order Track</h1>
+
+            <div class="container">
+                <ul>
+                    <label for="order-id">Order ID</label>
+                    <li><input type="text" placeholder="주문 번호" id="order-id"></li>
+                    <li><button class="btn-submit">SUBMIT</button></li>
+                    <li><button class="btn-back"><ion-icon name="chevron-back-outline"></ion-icon>Back To Login</button>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+
+    <!-- footer -->
+    <footer data-load-html="/src/views/common/footer/footer.html">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="/src/views/common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/views/common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="/src/views/common/img/favicon.io" />
+
+    <!-- custom -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="/src/views/common/css/reset.css">
+    <link rel="stylesheet" href="/src/views/admin/common/admin.css">
+    <link rel="stylesheet" href="/src/views/admin/category/category.css">
+    <link rel="stylesheet" href="/src/views/common/header/header.css">
+    <script src="/src/views/admin/common/loadHTML.js"></script>
+    <!-- 모달창.js -->
+    <script type="module" src="/src/views/admin/category/category.js"></script>
+</head>
+
+<body>
+    <header data-load-html="/src/views/admin/common/header/header.html">
+    </header>
+
+
+
+    <div class="mainBox">
+        <div class="inner">
+
+            <div class="titleBox">
+                <h2 class="title">카테고리 관리</h2>
+                <button type="button" class="plus" id="add-btn">
+                    + 추가
+                </button>
+            </div>
+
+
+            <div class="tableList">
+                <table id="categoryList">
+                    <colgroup>
+                        <col style="width:10%">
+                        <col style="width:30%">
+                        <col style="width:10%">
+                    </colgroup>
+
+                    <thead class="head">
+                        <th>순서</th>
+                        <th>카테고리</th>
+                        <th>수정/삭제</th>
+                    </thead>
+
+                    <tr class="category">
+                        <!-- td -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 카테고리 수정 -->
+    <div class="modal-container" id="myModal1">
+        <div class="modal">
+            <div class="modal-content">
+                <!-- 모달 내용 -->
+                <p>카테고리 수정</p>
+                <!-- 추가 모달 내용 -->
+
+                <div class="formBox">
+                    <label for="categoryInput">카테고리</label>
+                    <input type="text" placeholder="카테고리" id="categoryInput">
+                </div>
+
+                <div class="formBox">
+                    <label for="categorySort">순서</label>
+                    <input type="number" placeholder="순서, 0 부터 입력" id="categorySort">
+                </div>
+
+                <button type="button" id="save-Btn1">저장</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

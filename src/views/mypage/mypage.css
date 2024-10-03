@@ -1,0 +1,396 @@
+.mainBox {
+  min-height: 714px;
+}
+.mainBox h1 {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--orange-500);
+  margin-top: 60px;
+  text-align: center;
+}
+.mainBox .inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  position: relative;
+}
+.mainBox .inner section h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--camel-500);
+  margin-bottom: 18px;
+}
+
+/* ORDER STYLE BELOW *********************************************/
+.mainBox .inner .order {
+  min-width: 720px;
+}
+.mainBox .inner .order .container {
+  width: 100%;
+  border-bottom: solid 1px var(--camel-500);
+}
+.order .table__head {
+  width: 100%;
+  color: var(--camel-500);
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  padding: 24px 0;
+  box-sizing: border-box;
+  border-top: solid 1px var(--camel-500);
+}
+.order .table__head p:nth-child(1) {
+  width: 100%;
+}
+.order .table__head p:not(:first-child) {
+  min-width: 120px;
+}
+.order .table__body {
+  width: 100%;
+  color: var(--camel-500);
+}
+.order .table__body--top {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: solid 1px var(--camel-500);
+  border-bottom: solid 1px var(--cream-700);
+}
+.order .table__body--top b {
+  font-weight: 500;
+}
+.order .table__body--bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 0;
+  box-sizing: border-box;
+  color: var(--orange-500);
+  font-weight: 500;
+}
+.order .table__body--bottom div:nth-child(1) {
+  width: 100%;
+}
+.order .table__body--bottom div:not(:first-child) {
+  min-width: 120px;
+  text-align: center;
+}
+.order .table__body--bottom .status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.order .table__body--bottom .btn-order-edit {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: solid 1px var(--cream-700);
+  color: var(--camel-500);
+  font-weight: 400;
+  display: none;
+  transition: all 0.2s ease-in;
+}
+.order .table__body--bottom .btn-order-edit:hover {
+  border-color: var(--mocha-500);
+}
+.order .table__body--bottom .btn-order-edit.active {
+  display: block;
+}
+
+/* ACCOUNT STYLE BELOW *********************************************/
+.mainBox .inner .account {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.account .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.account .info-box {
+  background: #ffffff;
+  width: 100%;
+  border: 1px solid var(--mocha-500);
+  border-radius: 4px;
+  padding: 32px;
+  box-sizing: border-box;
+  box-shadow: 6px 8px 30px #886d4b20;
+  color: var(--camel-500);
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+}
+.account .info-box li {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+}
+.account .info-box li span:first-child {
+  min-width: 80px;
+  display: inline-block;
+}
+.account .btn-edit {
+  width: 100%;
+  padding: 18px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 20px;
+  color: var(--bg-color);
+  background: var(--camel-500);
+  transition: all 0.2s ease-in;
+}
+.account .btn-edit:hover {
+  background-color: var(--orange-500);
+}
+.account .btn-delete {
+  color: var(--camel-500);
+  text-decoration: underline;
+  transition: all 0.3s ease-in;
+}
+.account .btn-delete:hover {
+  color: var(--mocha-500);
+}
+
+/* MODAL STYLE BELOW *********************************************/
+.modal-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MODAL > 회원 정보 수정 *********************************************/
+.modal__edit-account {
+  color: var(--camel-500);
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 640px;
+  padding: 40px;
+  background-color: white;
+  row-gap: 18px;
+}
+.modal__edit-account .form {
+  width: 100%;
+}
+.modal__edit-account .form.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 18px;
+}
+.modal__edit-account .form.address label {
+  margin-bottom: 0;
+}
+.modal__edit-account input {
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal__edit-account p {
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+}
+.modal__edit-account .postalCode {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+}
+.modal__edit-account .postalCode input {
+  width: 100%;
+}
+.modal__edit-account .postalCode button {
+  white-space: nowrap;
+  padding: 14px 24px;
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: var(--orange-500);
+  border-radius: 4px;
+  margin-left: 10px;
+  border: 1px solid var(--camel-500);
+}
+.modal__edit-account .btn-save {
+  width: 100%;
+  padding: 18px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 20px;
+  color: var(--bg-color);
+  background: var(--camel-500);
+  transition: all 0.2s ease-in;
+}
+.modal__edit-account .btn-save:hover {
+  background-color: var(--orange-500);
+}
+
+/* MODAL > 탈퇴 알럿 *********************************************/
+.modal__delete-account {
+  box-sizing: border-box;
+  padding: 32px 72px;
+  background: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--orange-500);
+  width: auto;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.modal__delete-account ion-icon {
+  font-size: 65px;
+}
+.modal__delete-account .text {
+  font-size: 24px;
+}
+.modal__delete-account .btn-group {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  text-align: center;
+}
+.modal__delete-account .btn-group button {
+  min-width: 180px;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 18px 24px;
+  border-radius: 4px;
+  text-align: center;
+}
+.modal__delete-account .btn-group .btn-cancel {
+  border: 1px solid var(--camel-500);
+  color: var(--orange-500);
+}
+.modal__delete-account .btn-group .btn-submit {
+  background-color: var(--orange-500);
+  color: var(--bg-color);
+}
+
+.empty-order-message {
+  border-top: solid 1px var(--camel-500);
+  color: var(--camel-500);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 90px 0;
+  opacity: 40%;
+  display: none;
+}
+.empty-order-message.active {
+  display: block;
+}
+
+/* MODAL > 주문자 정보 수정 *********************************************/
+
+.modal__edit-orderer {
+  color: var(--camel-500);
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 640px;
+  padding: 40px;
+  background-color: white;
+  row-gap: 18px;
+}
+.modal__edit-orderer .form {
+  width: 100%;
+}
+.modal__edit-orderer .form.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 18px;
+}
+.modal__edit-orderer .form.address label {
+  margin-bottom: 0;
+}
+.modal__edit-orderer input {
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal__edit-orderer p {
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+}
+.modal__edit-orderer .postalCode {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+}
+.modal__edit-orderer .postalCode input {
+  width: 100%;
+}
+.modal__edit-orderer .postalCode button {
+  white-space: nowrap;
+  padding: 14px 24px;
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: var(--orange-500);
+  border-radius: 4px;
+  margin-left: 10px;
+  border: 1px solid var(--camel-500);
+}
+.modal__edit-orderer .btn-save {
+  width: 100%;
+  padding: 18px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 20px;
+  color: var(--bg-color);
+  background: var(--camel-500);
+  transition: all 0.2s ease-in;
+}
+.modal__edit-orderer .btn-save:hover {
+  background-color: var(--orange-500);
+}
+.modal__edit-orderer .btn-save1 {
+  width: 100%;
+  padding: 18px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 20px;
+  color: var(--bg-color);
+  background: var(--camel-500);
+  transition: all 0.2s ease-in;
+}
+.modal__edit-orderer .btn-save1:hover {
+  background-color: var(--orange-500);
+}

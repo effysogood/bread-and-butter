@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Better</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="../common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="../common/img/favicon.io" />
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="ordertrack.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/header/header.css">
+    <link rel="stylesheet" href="../common/footer/footer.css">
+    <script type="module" src="./ordertrack.js"></script>
+    <script src="../common/loadHTML.js"></script>
+    <script type="module" src="../common/header/header.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header data-load-html="../common/header/header.html"></header>
+
+    <div class="mainBox">
+        <h1>Order Track</h1>
+        <div class="inner">
+            <section class="order">
+                <div class="container">
+                    <div class="table__head">
+                        <p>주문 내역</p>
+                        <p>주문 금액</p>
+                        <p>진행 상태</p>
+                    </div>
+                    <!-- 리스트 영역 -->
+                </div>
+            </section>
+
+
+
+            <!-- ******** 회원 정보 수정 모달 BELOW ******** -->
+            <div class="modal-container" id="edit-orderer">
+                <div class="modal">
+                    <div class="modal__edit-account">
+                        <p>Edit Account Details</p>
+                        <!-- 추가 모달 내용 -->
+                        <div class="form">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" placeholder="이름">
+                        </div>
+
+                        <div class="form">
+                            <label for="email">Email *</label>
+                            <input type="text" id="email" placeholder="이메일">
+                        </div>
+                        <div class="form">
+                            <label for="phone">Phone *</label>
+                            <input type="text" id="phone" placeholder="휴대 전화">
+                        </div>
+
+                        <div class="form address">
+                            <label for="confirmPassword">Address *</label>
+                            <div class="postalCode">
+                                <input type="text" placeholder="우편번호" id="postCode">
+                                <button type="button" id="searchAddressBtn">주소 검색</button>
+                            </div>
+                            <input type="text" placeholder="기본 주소" id="address">
+                            <input type="text" placeholder="나머지 주소 (선택)" id="detail">
+                        </div>
+
+                        <button class="btn-save" type="submit">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer data-load-html=" ../common/footer/footer.html">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Better</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="../common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="../common/img/favicon.io" />
+
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/header/header.css">
+    <link rel="stylesheet" href="../common/footer/footer.css">
+    <script type="module" src="./detail.js"></script>
+    <script src="../common/loadHTML.js"></script>
+    <script type="module" src="../common/header/header.js"></script>
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <header data-load-html="../common/header/header.html"></header>
+
+    <!-- main -->
+    <div class="mainBox">
+        <div class="inner">
+
+            <div class="topBox">
+                <div>
+
+                    <!-- <div class="bookImg">
+                        <p class="img"><img src="https://picsum.photos/300/300" alt="책 표지"></p>
+                    </div>
+
+                    <div class="bookInfo">
+                        <h2 class="bookName">Title HereTitle HereTitle HereTitle Here</h2>
+
+                        <div class="option">
+                            <p class="category">American</p>
+                            <p class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <span class="num">5</span>
+                            </p>
+                        </div>
+
+                        <h3>￦<span class="price">17000</span></h3>
+                        <div class="priceButton">
+                            <div class="quantityButton">
+                                <button id="decreaseQuantity"><ion-icon name="remove-outline"></ion-icon></button>
+                                <span class="quantityInput"> 1 </span>
+                                <button id="increaseQuantity"><ion-icon name="add-outline"></button>
+                            </div>
+                            <button type="button" class="cartBtn">ADD TO CART</button>
+                        </div>
+                        <div class="bookText">
+                            부제 : 광주일상어 인문교양 에세이2<br>분야 : 인문 에세이<br>광주일상어 인문교양 에세이 2편. 광주말풀이를 시작으로 광주 지역어의 형성, 시비로
+                            만나는<br>광주 이야기, 시와 소설, 노랫말에서 읽을 수 있는 광주 등 17명의 필진과 함께한 17가지 이야기에는 광주일상어에 대한 더욱 다채롭고 풍부한
+                            재미가 담겨 있다.학문적 형식과 전형적인 사투리 어휘에 얽매이지 않고 우리 지역 일상에서 사용되는 모습 그대로를 담은 만큼 독자들에게 광주어와 함께한 추억과 정서가
+                            공감되고 공유될 것이다.
+
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- recommends -->
+                <div class="Recommends-Box">
+                    <h1>Recommends</h1>
+                </div>
+                <div>
+                    <ul class="Recommends-list" id="recommendsList">
+                        <!-- 제품을 랜덤하며 리스트 아이템을 생성
+                <li class="Recommends-item">
+                    <a href="#">
+                        <img src="https://picsum.photos/300/300" alt="제품 이미지">
+                        <h2 class="Recommends-name">제품 이름</h2>
+                        <span class="Recommends-price">가격</span>
+                    </a>
+                </li> -->
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer data-load-html="../common/footer/footer.html"></footer>
+</body>
+
+</html>

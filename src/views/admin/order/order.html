@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="/src/views/common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/views/common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="/src/views/common/img/favicon.io.png" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="/src/views/common/css/reset.css">
+    <link rel="stylesheet" href="/src/views/admin/common/admin.css">
+    <link rel="stylesheet" href="/src/views/common/header/header.css">
+    <link rel="stylesheet" href="/src/views/admin/order/order.css">
+    <script src="/src/views/admin/common/loadHTML.js"></script>
+    <!-- <script src="/src/views/admin/order/order.js"></script> -->
+    <script type="module" src="/src/views/admin/order/order.js"></script>
+
+
+</head>
+
+<body>
+    <header data-load-html="/src/views/admin/common/header/header.html">
+    </header>
+
+
+
+    <div class="mainBox">
+        <div class="inner">
+
+            <div class="titleBox">
+                <h2 class="title">주문 관리</h2>
+            </div>
+
+            <div class="tableList">
+                <table>
+                    <colgroup>
+                        <col style="width:40%">
+                        <col style="width:30%">
+                        <col style="width:20%">
+                        <col style="width:10%">
+                    </colgroup>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><b>주문 일자 : </b> 2022-11-12</li>
+                                <li><b>주문 시간 : </b> 03:35:21</li>
+                                <li><b>주문 번호 : </b> 20240220-000001</li>
+                                <li><b>상태 : </b> 주문 완료</li>
+                                <li><b>메세지 : </b> 부재 시, 경비실에 맡겨주세요.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>박지혜</li>
+                                <li>test@naver.com</li>
+                                <li>010-4933-7365</li>
+                                <li>
+                                    (041675) 상세 주소
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="center">
+                            <ul>
+                                <li><b>상태 변경</b><br>
+                                    <select name="state" id="state">
+                                        <option value="주문 완료">주문 완료</option>
+                                        <option value="배송중">배송중</option>
+                                        <option value="배송 완료">베송 완료</option>
+                                        <option value="주문 취소">주문 취소</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <button id="openModalbtn2" class="delete">삭제</button>
+                                </li>
+
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><b>주문 일자 : </b> 2022-11-12</li>
+                                <li><b>주문 시간 : </b> 03:35:21</li>
+                                <li><b>주문 번호 : </b> 20240220-000001</li>
+                                <li><b>상태 : </b> 주문 완료</li>
+                                <li><b>메세지 : </b> 부재 시, 경비실에 맡겨주세요.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>박지혜</li>
+                                <li>test@naver.com</li>
+                                <li>010-4933-7365</li>
+                                <li>
+                                    (041675) 경기도 안양시 만안구 박달동
+                                </li>
+                            </ul>
+                        </td>
+                        <td style="text-align: center;">
+                            <ul>
+                                <li><b>상태 변경</b><br>
+                                    <select name="state" id="state">
+                                        <option value="주문 완료">주문 완료</option>
+                                        <option value="배송중">배송중</option>
+                                        <option value="배송 완료">베송 완료</option>
+                                        <option value="주문 취소">주문 취소</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <button id="openModalbtn2" class="delete">삭제</button>
+                                </li>
+
+                            </ul>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-container" id="myModal2">
+        <div class="modal">
+            <div class="modal-content">
+                <ul>
+                    <li class="Exclamationpoint">
+                        <a href="#">
+                            <img src="/src/views/admin/common/image/Exclamation Point.png">
+                        </a>
+                    </li>
+                </ul>
+                <p>삭제하시겠습니까?</p>
+                <div class="button-container">
+                    <button id="delete-Btn">삭제</button>
+                    <button id="back-btn">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

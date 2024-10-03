@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter and Better</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="../common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="../common/img/favicon.io" />
+
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/header/header.css">
+    <link rel="stylesheet" href="../common/footer/footer.css">
+    <script type="module" src="./home.js"></script>
+    <script src="../common/loadHTML.js"></script>
+    <script type="module" src="../common/header/header.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header data-load-html="../common/header/header.html">
+    </header>
+
+    <!-- main_banner -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-1">
+                <div class="slide_inner first">
+                    <div class="textBox">
+                        <h3>
+                            이태리 할머니 파스타<br>논나들이 물려주는<br />이탈리아 가정식 비법 요리
+                        </h3>
+                        <a href='/detail?id=65e085a1c1817d81a47fa760'>See More</a>
+                    </div>
+                    <div class="imgBox">
+                        <img src="https://storage.googleapis.com/elice_04/west/west_21.png" alt="표지">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-2">
+                <div class="slide_inner second">
+                    <div class="textBox">
+                        <h3>
+                            채소 식탁<br />테이블민의 쉽고 맛있는<br />채소 한입 요리 레시피
+                        </h3>
+                        <a href='/detail?id=65e083f918221a8c885945e9'>See More</a>
+                    </div>
+
+                    <div class="imgBox">
+                        <img src="https://storage.googleapis.com/elice_04/health/health_21.jpeg" alt="표지">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-3">
+                <div class="slide_inner third">
+                    <div class="textBox">
+                        <h3>
+                            오니쿡 요리책<br />간단하게 완성하는<br />맛있고 멋있는 한 접시
+                        </h3>
+                        <a href='/detail?id=65e0844418221a8c885945ec'>See More</a>
+                    </div>
+
+                    <div class="imgBox">
+                        <img src="https://storage.googleapis.com/elice_04/east/east_21.jpeg" alt="표지">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- arrow -->
+        <div class="arrowBox">
+            <div class="swiper-button-next"><ion-icon name="arrow-forward-sharp"></ion-icon></div>
+            <div class="swiper-button-prev"><ion-icon name="arrow-back-sharp"></ion-icon></div>
+        </div>
+
+    </div>
+
+    <main>
+        <section class="Best-Sellers">
+            <h1>Best Sellers</h1>
+        </section>
+        <section>
+            <ul class="Best-list" id="bestSellersList">
+                <!-- 제품을 반복하며 리스트 아이템을 생성
+                <li class="Best-item">
+                    <a href="#">
+                        <p class="img"><img src="https://picsum.photos/300/300" alt="제품 이미지">
+                        <h2 >제품 이름</h2>
+                        <span class="price">가격</span>
+                    </a>
+                </li>-->
+            </ul>
+        </section>
+        <section>
+            <ul class="Recommends-random">
+                <!-- 제품을 반복하며 리스트 아이템을 생성 -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer data-load-html="../common/footer/footer.html">
+    </footer>
+</body>
+
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+    });
+
+</script>
+
+</html>

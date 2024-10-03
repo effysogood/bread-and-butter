@@ -1,0 +1,30 @@
+footer {
+  width: 100vw;
+  background-color: var(--orange-500);
+  padding: 72px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+footer .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  margin-bottom: 40px;
+}
+footer .logo {
+  display: inline-block;
+  --bg-color: #fdf4e6;
+  color: var(--bg-color);
+  list-style: none;
+  transition: all 0.3s ease-in;
+}
+
+footer .logo:hover {
+  transform: scale(1.2);
+  color: var(--cream-500);
+}
+
+.copyright {
+  color: var(--bg-color);
+}

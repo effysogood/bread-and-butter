@@ -1,0 +1,134 @@
+/* 회원가입 폼 */
+.mainBox .inner {
+  width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+.mainBox .inner .titleBox {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 0;
+}
+
+.mainBox .inner .titleBox h2 {
+  font-size: 42px;
+  color: var(--orange-500);
+  font-weight: 600;
+}
+.messageInput.off {
+  display: none;
+}
+.joinForm label {
+  display: block;
+  font-size: 18px;
+}
+.joinForm .form {
+  margin-bottom: 18px;
+}
+.joinForm .form:last-child {
+  margin-bottom: 0px;
+}
+.joinForm input {
+  width: 100%;
+}
+.phoneInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postalCode input {
+  width: 450px;
+}
+.postalCode button {
+  box-sizing: border-box;
+  float: right;
+  padding: 13px 24px;
+  font-size: 18px;
+  color: var(--orange-500);
+  border-radius: 4px;
+  border: 1px solid var(--camel-500);
+}
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.address input {
+  margin-bottom: 18px;
+}
+.signButton {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px;
+  font-size: 18px;
+  background: var(--camel-500);
+  color: #fff;
+  border-radius: 4px;
+  margin: 24px 0;
+  transition: all 0.2s ease-in;
+}
+.signButton:hover {
+  background: var(--orange-500);
+}
+
+/* 가입 완료 */
+.joinCompletion {
+  display: none;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+.joinCompletion > div {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.joinCompletion > div > h3 {
+  color: var(--orange-500);
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.joinCompletion > div p {
+  background: #fff;
+  border: 1px solid var(--camel-500);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--orange-500);
+  width: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 30px 120px;
+  border-radius: 4px;
+}
+.joinCompletion > div p ion-icon {
+  font-size: 65px;
+}
+.joinCompletion > div p span {
+  display: inline-block;
+}
+.joinCompletion > div p span.textSpan {
+  margin: 24px 0;
+}
+
+.joinCompletion > div .buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+.joinCompletion > div .buttons .home {
+  font-size: 18px;
+  color: var(--orange-500);
+  box-sizing: border-box;
+  padding: 18px 24px;
+  border: 1px solid var(--camel-500);
+  border-radius: 4px;
+  transition: all 0.3s ease-in;
+}
+.joinCompletion > div .buttons .home:hover {
+  box-shadow: 6px 8px 30px rgba(136, 108, 75, 0.2);
+}

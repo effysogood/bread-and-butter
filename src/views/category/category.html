@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butter and Better</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="./category.css">
+  <link rel="stylesheet" href="../common/css/reset.css">
+  <link rel="stylesheet" href="../common/header/header.css">
+  <link rel="stylesheet" href="../common/footer/footer.css">
+  <script type="module" src="./category.js"></script>
+  <script src="../common/loadHTML.js"></script>
+  <script type="module" src="../common/header/header.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="../common/img/faviconx64.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../common/img/faviconx32.png" />
+  <link rel="shortcut icon" href="../common/img/favicon.io" />
+
+  <!-- 아이콘 -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body>
+  <header data-load-html="../common/header/header.html"></header>
+
+  <main>
+    <section class="category">
+      <h1 id="categoryName">All Books</h1>
+      <!-- <p>Description</p> -->
+    </section>
+
+    <section class="products-sort">
+      <span class="total-count" id="totalCount">100 products</span>
+      <select class="product-filter">
+        <option value="최신상품">최신순</option>
+        <option value="인기상품">인기순</option>
+        <option value="낮은 가격순">낮은 가격순</option>
+        <option value="높은 가격순">높은 가격순</option>
+      </select>
+    </section>
+
+    <section>
+      <ul class="product-list" id="productList">
+        <!-- 제품을 반복하며 리스트 아이템을 생성 -->
+        <!-- <li class="product-item">
+          <a href="#">
+            <p claass="img"><img src="https://picsum.photos/300/300" alt="제품 이미지"></p>
+            <h2>제품 이름</h2>
+            <span class="price">price</span>
+          </a>
+        </li> -->
+      </ul>
+    </section>
+    <div class="pagination-box">
+      <ul class="pagination">
+        <li class="previous-page">
+          <a href="#">
+            <img src="./image/btn-prev.png" alt="Previous">
+          </a>
+        </li>
+        <li class="current-page" id="currentPageInfo">
+          Page 1 of 5
+        </li>
+        <li class="next-page">
+          <a href="#">
+            <img src="./image/btn-next.png" alt="Previous">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer data-load-html="../common/footer/footer.html"></footer>
+</body>
+
+</html>

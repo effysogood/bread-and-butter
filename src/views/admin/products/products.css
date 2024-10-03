@@ -1,0 +1,93 @@
+.upload-btn {
+  background-color: bisque;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  font-size: 18px;
+  border: 1px solid var(--cream-700);
+  border-radius: 4px;
+  width: 130px;
+}
+.img {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 16px;    
+  max-width: 30px;
+}
+#categorySelect{
+  width: 550px;
+}
+.content {
+  max-width: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.modal-delete-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--orange-500);
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: 1px solid var(--orange-500);
+}
+
+.modal-edit-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  font-size: 16px;
+  background: var(--orange-500);
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: 1px solid var(--orange-500);
+  color: #fff;
+  margin-right: 20px;
+}
+
+ /* 페이지네이션  */
+ .pagination-box{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 60px 0;
+ }
+ .pagination {
+  width: 391px;
+  height: 132px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagenation .previouse-page {
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+.pagenation .next-page {
+  text-decoration: none;
+}
+.current-page {
+  font-size: 24px;
+  font-weight: medium;
+  padding: 32px;
+  color: var(--orange-500);
+}
+/* 추후 수정예정  */
+.pagination .active {
+  color: #fff;
+  cursor: default;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}

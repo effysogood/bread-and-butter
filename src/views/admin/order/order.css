@@ -1,0 +1,27 @@
+table tr td{
+    text-align: left;
+    box-sizing: border-box;
+    padding: 24px 24px 24px 0px;
+}
+td ul li{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+td ul li b{
+    font-weight: bold;
+}
+.option-select{
+    font-size: 30px;
+}
+#state{
+    margin-top: 10px;
+}
+.center{
+    text-align: center;
+}
+
+.delete {
+    width: 100px;
+    height: 60px;
+}

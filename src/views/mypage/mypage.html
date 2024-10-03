@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Better</title>
+
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="../common/img/faviconx64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../common/img/faviconx32.png" />
+    <link rel="shortcut icon" href="../common/img/favicon.io" />
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="mypage.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/header/header.css">
+    <link rel="stylesheet" href="../common/footer/footer.css">
+    <script type="module" src="./mypage.js"></script>
+    <script src="../common/loadHTML.js"></script>
+    <script type="module" src="../common/header/header.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header data-load-html="/src/views/common/header/header.html"></header>
+
+    <div class="mainBox">
+        <h1>My Account</h1>
+        <div class="inner">
+            <section class="order">
+                <h3>Order History</h3>
+                <div class="container">
+                    <div class="table__head">
+                        <p>주문 내역</p>
+                        <p>주문 금액</p>
+                        <p>진행 상태</p>
+                    </div>
+
+                    <div class="empty-order-message">
+                        <span>회원 정보와 일치하는 주문이 없습니다.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="account">
+                <h3>Account Details</h3>
+                <div class="container">
+                    <ul class='info-box'>
+                        <li><span>Name</span><span class='name'>최세영</span></li>
+                        <li><span>Email</span><span class='email'>butter@better.com</span></li>
+                        <li><span>Phone</span><span class='phone'>010-1234-5678</span></li>
+                        <li><span>Address</span><span class='address'>서울특별시 성동구 성수2가제3동 광나루로6길 49</span></li>
+                    </ul>
+                    <button class='btn-edit' type='button'>EDIT</button>
+                    <button class='btn-delete' type='button'>DELETE ACCOUNT</button>
+                </div>
+            </section>
+
+
+            <!-- ******** 회원 정보 수정 모달 BELOW ******** -->
+            <div class="modal-container" id="edit-orderer">
+                <div class="modal">
+                    <div class="modal__edit-orderer">
+                        <p>Edit Orderer Details</p>
+                        <!-- 추가 모달 내용 -->
+                        <div class="form">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" placeholder="이름">
+                        </div>
+
+                        <div class="form">
+                            <label for="email">Email *</label>
+                            <input type="text" id="email" placeholder="이메일">
+                        </div>
+                        <div class="form">
+                            <label for="phone">Phone *</label>
+                            <input type="text" id="phone" placeholder="휴대 전화">
+                        </div>
+
+                        <div class="form address">
+                            <label for="confirmPassword">Address *</label>
+                            <div class="postalCode">
+                                <input type="text" placeholder="우편번호" id="postCode">
+                                <button type="button" id="searchAddressBtn">주소 검색</button>
+                            </div>
+                            <input type="text" placeholder="기본 주소" id="address">
+                            <input type="text" placeholder="나머지 주소 (선택)" id="detail">
+                        </div>
+
+                        <button class="btn-save1" type="submit">SAVE</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ******** 회원 정보 수정 모달 BELOW ******** -->
+            <div class="modal-container" id="edit-account">
+                <div class="modal">
+                    <div class="modal__edit-account">
+                        <p>Edit Account Details</p>
+                        <!-- 추가 모달 내용 -->
+                        <div class="form">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" placeholder="이름">
+                        </div>
+
+                        <div class="form">
+                            <label for="email">Email *</label>
+                            <input type="text" id="email" placeholder="이메일">
+                        </div>
+                        <div class="form">
+                            <label for="phone">Phone *</label>
+                            <input type="text" id="phone" placeholder="휴대 전화">
+                        </div>
+
+                        <div class="form address">
+                            <label for="confirmPassword">Address *</label>
+                            <div class="postalCode">
+                                <input type="text" placeholder="우편번호" id="postCode">
+                                <button type="button" id="searchAddressBtn">주소 검색</button>
+                            </div>
+                            <input type="text" placeholder="기본 주소" id="address">
+                            <input type="text" placeholder="나머지 주소 (선택)" id="detail">
+                        </div>
+
+                        <button class="btn-save" type="submit">SAVE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ******** 탈퇴 알럿 BELOW ******** -->
+            <div class="modal-container" id='delete-account'>
+                <div class='modal'>
+                    <div class="modal__delete-account">
+                        <p>
+                            <ion-icon name="alert-circle"></ion-icon>
+                        </p>
+                        <p class="text">탈퇴하시겠습니까?</p>
+                        <div class="btn-group">
+                            <button class="btn-cancel" type='button'>취소</button>
+                            <button class="btn-submit" type='button'>확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer data-load-html="/src/views/common/footer/footer.html">
+    </footer>
+</body>
+
+</html>
