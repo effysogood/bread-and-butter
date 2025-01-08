@@ -5,15 +5,15 @@ export const API_HOST = (() => {
     return 'http://localhost:3000';
   }
 
-  if (hostname === 'bread-and-butter.vercel.app') {
-    return 'https://bread-and-butter-backend.vercel.app';
+  if (hostname === 'bread-and-butter-silk.vercel.app') {
+    return 'https://bread-and-butter-silk.vercel.app';
   }
 
   // GitHub Pages 도메인
   if (hostname.includes('github.io')) {
-    return 'https://bread-and-butter-backend.vercel.app';
+    return 'https://bread-and-butter-silk.vercel.app';
   }
 
   // 기본값
-  return 'https://bread-and-butter-backend.vercel.app';
+  return 'https://bread-and-butter-silk.vercel.app';
 })();
