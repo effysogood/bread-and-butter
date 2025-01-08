@@ -13,33 +13,24 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "index.js"
+      "dest": "/index.js"
     },
     {
-      "src": "/static/(.*)",
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|json))",
       "dest": "/src/views/$1"
     },
     {
-      "src": "/(.*)\\.js",
-      "dest": "/src/views/$1.js"
-    },
-    {
-      "src": "/(.*)\\.css",
-      "dest": "/src/views/$1.css"
-    },
-    {
-      "src": "/(.*)\\.png",
-      "dest": "/src/views/$1.png"
+      "src": "/common/(.*)",
+      "dest": "/src/views/common/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "index.js",
-      "headers": {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
-      }
+      "dest": "/index.js"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "@mongo_uri",
+    "SECRET_KEY": "@secret_key",
+    "PROJECT_ID": "@project_id"
+  }
 }

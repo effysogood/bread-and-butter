@@ -71,11 +71,25 @@ app.use(function (err, req, res, next) {
   });
 });
 
-// 정적 파일 서빙 설정 통합
+// 정적 파일 서빙 설정
 app.use(express.static(path.join(__dirname, 'views')));
-app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
+app.use('/common', express.static(path.join(__dirname, 'views/common')));
 app.use('/images', express.static(path.join(__dirname, 'views/common/img')));
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
-app.use('/upload', uploadRouter);
+// API 라우트들
+app.use('/api/books', bookRouter);
+app.use('/api/users', userRouter);
+app.use('/api/categories', categoryRouter);
+app.use('/api/orders', orderRouter);
+app.use('/api/uploads', uploadRouter);
+
+// 모든 HTML 요청을 처리하는 라우트
+app.get('*', (req, res) => {
+  // /src/views 디렉토리에서 해당하는 HTML 파일을 찾아 제공
+  const requestedPath =
+    req.path === '/' ? '/home/home.html' : `${req.path}/index.html`;
+  res.sendFile(path.join(__dirname, 'views', requestedPath));
+});
 
 module.exports = app;
