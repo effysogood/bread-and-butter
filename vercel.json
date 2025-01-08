@@ -16,16 +16,64 @@
       "dest": "/index.js"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|json))",
-      "dest": "/src/views/$1"
+      "src": "/join",
+      "dest": "/src/views/join/join.html"
+    },
+    {
+      "src": "/join/(.*)",
+      "dest": "/src/views/join/$1"
+    },
+    {
+      "src": "/login",
+      "dest": "/src/views/login/login.html"
+    },
+    {
+      "src": "/login/(.*)",
+      "dest": "/src/views/login/$1"
+    },
+    {
+      "src": "/order",
+      "dest": "/src/views/order/order.html"
+    },
+    {
+      "src": "/order/(.*)",
+      "dest": "/src/views/order/$1"
+    },
+    {
+      "src": "/common/header/header.html",
+      "dest": "/src/views/common/header/header.html"
+    },
+    {
+      "src": "/common/footer/footer.html",
+      "dest": "/src/views/common/footer/footer.html"
     },
     {
       "src": "/common/(.*)",
       "dest": "/src/views/common/$1"
     },
     {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|json))",
+      "dest": "/src/views/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.js"
+    },
+    {
+      "src": "/ordertrack",
+      "dest": "/src/views/ordertrack/ordertrack.html"
+    },
+    {
+      "src": "/ordertrack/(.*)",
+      "dest": "/src/views/ordertrack/$1"
+    },
+    {
+      "src": "/mypage",
+      "dest": "/src/views/mypage/mypage.html"
+    },
+    {
+      "src": "/mypage/(.*)",
+      "dest": "/src/views/mypage/$1"
     }
   ],
   "env": {

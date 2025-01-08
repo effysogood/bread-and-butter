@@ -1,20 +1,17 @@
-function loadHTML(file, targetElement) {
-  var rawFile = new XMLHttpRequest();
-  rawFile.open("GET", file, true);
-  rawFile.onreadystatechange = function () {
-      if (rawFile.readyState === 4) {
-          if (rawFile.status === 200 || rawFile.status === 0) {
-              var allText = rawFile.responseText;
-              targetElement.innerHTML= allText;
-          }
-      }
-  };
-  rawFile.send(null);
-}
+document.addEventListener('DOMContentLoaded', function () {
+  const elements = document.querySelectorAll('[data-load-html]');
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-load-html]').forEach((element) => {
-        const filePath = element.dataset.loadHtml
-        loadHTML(filePath, element)
-    })
-})
+  elements.forEach(async function (element) {
+    try {
+      const filePath = element.getAttribute('data-load-html');
+      const response = await fetch(filePath);
+
+      if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+
+      const html = await response.text();
+      element.innerHTML = html;
+    } catch (error) {
+      console.error('Error loading HTML:', error);
+    }
+  });
+});

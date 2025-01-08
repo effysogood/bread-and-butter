@@ -73,6 +73,14 @@ app.use(function (err, req, res, next) {
 
 // 정적 파일 서빙 설정
 app.use(express.static(path.join(__dirname, 'views')));
+app.use('/join', express.static(path.join(__dirname, 'views/join')));
+app.use('/login', express.static(path.join(__dirname, 'views/login')));
+app.use('/order', express.static(path.join(__dirname, 'views/order')));
+app.use(
+  '/ordertrack',
+  express.static(path.join(__dirname, 'views/ordertrack'))
+);
+app.use('/mypage', express.static(path.join(__dirname, 'views/mypage')));
 app.use('/common', express.static(path.join(__dirname, 'views/common')));
 app.use('/images', express.static(path.join(__dirname, 'views/common/img')));
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
@@ -86,10 +94,15 @@ app.use('/api/uploads', uploadRouter);
 
 // 모든 HTML 요청을 처리하는 라우트
 app.get('*', (req, res) => {
-  // /src/views 디렉토리에서 해당하는 HTML 파일을 찾아 제공
-  const requestedPath =
-    req.path === '/' ? '/home/home.html' : `${req.path}/index.html`;
-  res.sendFile(path.join(__dirname, 'views', requestedPath));
+  const reqPath = req.path === '/' ? '/home/home.html' : `${req.path}.html`;
+  const filePath = path.join(__dirname, 'views', reqPath.replace(/^\//, ''));
+
+  // 파일 존재 여부 확인 후 전송
+  if (fs.existsSync(filePath)) {
+    res.sendFile(filePath);
+  } else {
+    res.status(404).send('Page not found');
+  }
 });
 
 module.exports = app;
