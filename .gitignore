@@ -26,6 +26,7 @@ dist-ssr
 .eslintcache
 .env
 .gitkeep
+.github
 
 sonyy
 sonyy.js
