@@ -30,7 +30,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://bread-and-butter.vercel.app'],
+    origin: [
+      'http://localhost:3000',
+      'https://bread-and-butter-silk.vercel.app',
+    ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -68,16 +71,11 @@ app.use(function (err, req, res, next) {
   });
 });
 
-//api 테스트 경로 설정
-app.use('/common', express.static(path.join(__dirname, 'views', 'common')));
-app.use('/src/views', express.static(path.join(__dirname, 'views')));
-app.use('/upload', express.static(path.join(__dirname, 'src/public')));
-app.use('/uploads', express.static(path.join(__dirname, 'src/public')));
-app.use('/upload', express.static('src/public'));
-
-app.use('/upload', uploadRouter);
-
+// 정적 파일 서빙 설정 통합
 app.use(express.static(path.join(__dirname, 'views')));
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
+app.use('/images', express.static(path.join(__dirname, 'views/common/img')));
+
+app.use('/upload', uploadRouter);
 
 module.exports = app;

@@ -4,6 +4,10 @@
     {
       "src": "index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "src/views/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -14,6 +18,18 @@
     {
       "src": "/static/(.*)",
       "dest": "/src/views/$1"
+    },
+    {
+      "src": "/(.*)\\.js",
+      "dest": "/src/views/$1.js"
+    },
+    {
+      "src": "/(.*)\\.css",
+      "dest": "/src/views/$1.css"
+    },
+    {
+      "src": "/(.*)\\.png",
+      "dest": "/src/views/$1.png"
     },
     {
       "src": "/(.*)",

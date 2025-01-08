@@ -1,4 +1,4 @@
-import { API_HOST } from '../../common/api.js';
+import { API_HOST } from '../api.js';
 import { waitFor } from '../../common/utils.js';
 
 // 카테고리 데이터 불러오기
