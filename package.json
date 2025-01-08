@@ -7,7 +7,9 @@
   "main": "app.js",
   "type": "commonjs",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "vercel-build": "echo 'Build step completed'"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.7.0",
@@ -28,7 +30,8 @@
     "nanoid": "^5.0.5",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "vercel": "^39.2.6"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

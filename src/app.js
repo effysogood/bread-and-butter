@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
 require('dotenv').config();
 const multer = require('multer');
-const {Storage} = require('@google-cloud/storage');
+const { Storage } = require('@google-cloud/storage');
 
 const viewRouter = require('./routers/viewRouter');
 const bookRouter = require('./routers/bookRouter');
@@ -28,14 +28,21 @@ db.once('open', () => {
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
-// parse application/json
+app.use(
+  cors({
+    origin: ['http://localhost:3000', 'https://bread-and-butter.vercel.app'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
+
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/admin', loginRequired, adminOnly);
 app.use(viewRouter);
-app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Butter and Better');
@@ -57,7 +64,8 @@ app.use(function (err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
   res.json({
-    msg: err.message});
+    msg: err.message,
+  });
 });
 
 //api 테스트 경로 설정
@@ -69,6 +77,7 @@ app.use('/upload', express.static('src/public'));
 
 app.use('/upload', uploadRouter);
 
-app.use(express.static("/views"))
+app.use(express.static(path.join(__dirname, 'views')));
+app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 
 module.exports = app;
